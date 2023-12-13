@@ -1,0 +1,33 @@
+/* App.css */
+.phone-container {
+  max-width: 375px; /* Width of the phone-like container */
+  height: 667px; /* Height of the phone-like container */
+  margin: auto;
+  border: 1px solid #000; /* Gives a border to your "phone" */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for aesthetics */
+  border-radius: 20px; /* Rounded corners for the "phone" */
+  overflow: hidden; /* Prevents content from spilling outside the "phone" */
+  position: relative;
+}
+
+@media only screen and (max-width: 375px) {
+  .phone-container {
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+.logo-image {
+  max-width: 35%;
+  height: auto; 
+}
+
+.qr-canvas {
+  padding-left: 3.25rem;
+  padding-top: 14rem;
+}
+
