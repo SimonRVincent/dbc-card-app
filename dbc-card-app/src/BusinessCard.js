@@ -77,7 +77,8 @@ function BusinessCard() {
         <Col xs={12} className="text-center">
           <h3 id="name">{userData.name}</h3>
           <p id="position">{userData.position}</p>
-          <p id="emailPhone">{`${userData.email} | ${userData.phone}`}</p>
+          <p id="email">{`${userData.email}`}</p>
+          <p id="phone">{`${userData.phone}`}</p>
         </Col>
       </Row>
 
@@ -88,7 +89,7 @@ function BusinessCard() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image className="logo-image" src="corp_logo.png" />
+            <Image className="logo-image" src="/corp_logo.png" alt="Company Logo" />
           </a>
         </Col>
       </Row>

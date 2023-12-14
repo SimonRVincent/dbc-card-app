@@ -1,13 +1,7 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
-  Container,
-  Row,
-  Col,
-  Image,
-  Button,
-  Card,
-  Modal,
+  Container
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BusinessCard from './BusinessCard';
