@@ -23,23 +23,24 @@ function BusinessCard() {
     github: "https://github.com/yourprofile",
     twitter: "https://twitter.com/yourprofile",
     aboutTitle: "About Me",
-    aboutBody: "This is some text about the person or additional details they wish to include on their digital business card."
+    aboutBody:
+      "This is some text about the person or additional details they wish to include on their digital business card.",
   });
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
-    const name = queryParams.get('name');
-    const position = queryParams.get('position');
-    const email = queryParams.get('email');
-    const phone = queryParams.get('phone');
-    const linkedIn = queryParams.get('linkedIn');
-    const github = queryParams.get('github');
-    const twitter = queryParams.get('twitter');
-    const aboutTitle = queryParams.get('aboutTitle');
-    const aboutBody = queryParams.get('aboutBody');
+    const name = queryParams.get("name");
+    const position = queryParams.get("position");
+    const email = queryParams.get("email");
+    const phone = queryParams.get("phone");
+    const linkedIn = queryParams.get("linkedIn");
+    const github = queryParams.get("github");
+    const twitter = queryParams.get("twitter");
+    const aboutTitle = queryParams.get("aboutTitle");
+    const aboutBody = queryParams.get("aboutBody");
 
     if (name || position || email || phone) {
-      setUserData(prevData => ({
+      setUserData((prevData) => ({
         ...prevData,
         name: name || prevData.name,
         position: position || prevData.position,
@@ -49,7 +50,7 @@ function BusinessCard() {
         github: github || prevData.github,
         twitter: twitter || prevData.twitter,
         aboutTitle: aboutTitle || prevData.aboutTitle,
-        aboutBody: aboutBody || prevData.aboutBody
+        aboutBody: aboutBody || prevData.aboutBody,
       }));
     }
   }, []);
@@ -57,11 +58,18 @@ function BusinessCard() {
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
 
+  // Determine the image path based on the name
+  const profileImagePath = userData.name.includes("Simon")
+    ? "path_to_simon_image.jpg"
+    : userData.name.includes("Katie")
+    ? "path_to_katie_image.jpg"
+    : "default_profile_image.jpg"; // Default path
+
   return (
     <Container className="phone-container d-flex flex-column justify-content-center align-items-center">
       <Row className="w-100">
         <Col xs={12} className="d-flex justify-content-center">
-          <Image src="path_here" roundedCircle />
+          <Image src={profileImagePath} roundedCircle />
         </Col>
       </Row>
 
@@ -131,9 +139,7 @@ function BusinessCard() {
           <Card>
             <Card.Body>
               <Card.Title id="aboutTitle">{userData.aboutTitle}</Card.Title>
-              <Card.Text id="aboutBody">
-                {userData.aboutBody}
-              </Card.Text>
+              <Card.Text id="aboutBody">{userData.aboutBody}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
