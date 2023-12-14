@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dbc-card-app/static/css/main.09a5b234.css",
-    "main.js": "/dbc-card-app/static/js/main.234221e7.js",
+    "main.js": "/dbc-card-app/static/js/main.2d4e22de.js",
     "static/js/787.2e993b91.chunk.js": "/dbc-card-app/static/js/787.2e993b91.chunk.js",
     "static/media/corp_logo.png": "/dbc-card-app/static/media/corp_logo.bd4f61cff950b228006f.png",
     "index.html": "/dbc-card-app/index.html",
     "main.09a5b234.css.map": "/dbc-card-app/static/css/main.09a5b234.css.map",
-    "main.234221e7.js.map": "/dbc-card-app/static/js/main.234221e7.js.map",
+    "main.2d4e22de.js.map": "/dbc-card-app/static/js/main.2d4e22de.js.map",
     "787.2e993b91.chunk.js.map": "/dbc-card-app/static/js/787.2e993b91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09a5b234.css",
-    "static/js/main.234221e7.js"
+    "static/js/main.2d4e22de.js"
   ]
 }
