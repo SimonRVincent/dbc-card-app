@@ -11,7 +11,9 @@ import {
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logoImage from './images/corp_logo.png';
-
+import simonImage from './images/simonProfile.jpg';
+import katieImage from './images/katieProfile.jpg';
+import defaultImage from './images/defaultProfile.jpg';
 
 function BusinessCard() {
   const [showModal, setShowModal] = useState(false);
@@ -61,10 +63,10 @@ function BusinessCard() {
 
   // Determine the image path based on the name
   const profileImagePath = userData.name.includes("Simon")
-    ? "path_to_simon_image.jpg"
+    ? {simonImage}
     : userData.name.includes("Katie")
-    ? "path_to_katie_image.jpg"
-    : "default_profile_image.jpg"; // Default path
+    ? {katieImage}
+    : {defaultImage}; // Default Profilke Image
 
   return (
     <Container className="phone-container d-flex flex-column justify-content-center align-items-center">
