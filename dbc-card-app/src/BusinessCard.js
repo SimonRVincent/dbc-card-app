@@ -10,7 +10,8 @@ import {
   Modal,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// other imports
+import logoImage from './images/corp_logo.png';
+
 
 function BusinessCard() {
   const [showModal, setShowModal] = useState(false);
@@ -84,13 +85,11 @@ function BusinessCard() {
 
       <Row className="w-100 mt-3">
         <Col xs={12} className="text-center">
-          <a
-            href="https://your-link.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image className="logo-image" src="/corp_logo.png" alt="Company Logo" />
-          </a>
+          <Image
+            className="logo-image"
+            src={logoImage}
+            alt="Company Logo"
+          />
         </Col>
       </Row>
 
