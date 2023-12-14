@@ -85,12 +85,13 @@ function BusinessCard() {
         </Col>
       </Row>
 
-      <Row className="w-100 mt-3">
+      <Row className="w-100">
         <Col xs={12} className="text-center">
           <Image
             className="logo-image"
             src={logoImage}
             alt="Company Logo"
+            
           />
         </Col>
       </Row>
@@ -141,7 +142,7 @@ function BusinessCard() {
           <Card>
             <Card.Body>
               <Card.Title id="aboutTitle">{userData.aboutTitle}</Card.Title>
-              <Card.Text id="aboutBody">{userData.aboutBody}</Card.Text>
+              <Card.Text className="small-font" id="aboutBody">{userData.aboutBody}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
