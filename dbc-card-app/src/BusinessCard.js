@@ -63,10 +63,10 @@ function BusinessCard() {
 
   // Determine the image path based on the name
   const profileImagePath = userData.name.includes("Simon")
-    ? {simonImage}
+    ? simonImage
     : userData.name.includes("Katie")
-    ? {katieImage}
-    : {defaultImage}; // Default Profilke Image
+    ? katieImage
+    : defaultImage; // Default Profile Image
 
   return (
     <Container className="phone-container d-flex flex-column justify-content-center align-items-center">
